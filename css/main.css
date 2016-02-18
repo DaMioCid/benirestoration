@@ -1,0 +1,339 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Raleway", Helvetica, sans-serif;
+  /*min-width: 100vh;*/
+}
+header {
+  height: 60px;
+  background-color: #141414;
+  color: #F5F5F5;
+  /*display: flex;
+  flex-direction: row;
+  justify-content: space-between;*/
+}
+.logo {
+  float:left;
+  font-weight: 400;
+  font-size: 40px;
+  margin: 6.5px 0 6.5px 40px;
+}
+nav {
+  float: right;
+  margin: 19.5px 40px 19.5px 0;
+}
+nav a {
+  color: #F5F5F5;
+  font-size: 18px;
+  font-weight: 200;
+  text-decoration: none;
+  margin: 0 20px;
+}
+.menu-svg {
+  float: right;
+  margin-top: 5.5px;
+  margin-right: 50px;
+  display: none;
+}
+.home-content {
+  background-image:url(../img/home-benirestoration3.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  min-height: calc(100vh - 60px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+
+}
+.wrapper-hs {
+  margin-bottom: 15%;
+  /*position: flex;*/
+
+  /*margin: 30% auto;*/
+}
+.title {
+  color: #F5F5F5;
+  font-weight: 500;
+  font-size: 9rem;
+  margin: 0 auto;
+  border: solid 1.3rem #F5F5F5;
+  text-shadow:  6px 6px 8px rgba(0, 0, 0, .8);
+  box-shadow: 6px 6px 8px rgba(0, 0, 0, .8);
+  padding: 5px 30px;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+}
+.slogan {
+  color: #F5F5F5;
+  font-weight: 200;
+  font-size: 2rem;
+  margin: 10px 0 auto;
+}
+.learnMore {
+  font-size: 2rem;
+  font-weight: 200;
+  color: #141414;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  padding: .5rem 5rem;
+  background: rgba(250, 250, 250, .28);
+  text-decoration: none;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  margin-left: -100px;
+  bottom: 20px;
+}
+
+.about-content {
+  background-image:url(../img/about-benirestoration.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center ;
+  /*padding: 15rem 0 15rem 85rem;*/
+  /*max-height: 100vh;*/
+  position: relative;
+  max-height: 100%;
+
+}
+.about-content p {
+  font-size: 5rem;
+  font-weight: 200;
+  color: #F5F5F5;
+  margin: 10% 0 10% 60%;
+  display: inline-block;
+
+
+}
+.work-content {
+  background-image:url(../img/work-benirestoration.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /*padding: 15rem 0 15rem 85rem;*/
+  /*max-height: 100vh;*/
+  position: relative;
+  max-height: 100%;
+
+  /*display: flex;*/
+}
+.work-content p {
+  font-size: 5rem;
+  font-weight: 200;
+  color: #F5F5F5;
+  margin: 40% 0 2% 2%;
+  display: inline-block;
+}
+/*.work-content p {
+  font-size: 6rem;
+  font-weight: 200;
+  color: #F5F5F5;
+  margin: 0;
+}*/
+.contact-content{
+  background-image:url(../img/contact-benirestoration.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  max-height: 100%;
+  text-align: center;
+}
+.contact-content h4 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: #F5F5F5;
+  margin: 0 auto;
+  /*display: inline-block;*/
+  padding-top: 50px;
+  text-transform: capitalize;
+}
+.icons {
+ display: flex;
+ justify-content: space-between;
+ /*margin: 0 10%;*/
+ padding: 10%;
+}
+[data-name="svg"] {
+  /*margin: 5%;*/
+  width: 200px;
+  fill: #F5F5F5;
+}
+#message .cls-1, #locate .cls-1 {
+  fill: none;
+  stroke: #F5F5F5;
+  stroke-miterlimit: 10;
+  stroke-width: 10px;
+}
+#call .cls-1, #call .cls-2 {
+  fill: none;
+  stroke: #F5F5F5;
+  stroke-miterlimit: 10px;
+}
+#call .cls-1 {
+  stroke-width: 10px;
+}
+#menu .cls-1 {
+  fill: none;
+  stroke: #FFF;
+  stroke-miterlimit: 10;
+  stroke-width: 15px;
+}
+#menu {
+  height: 45px;
+  width: 50px;
+  padding:1px;
+}
+
+footer {
+  background-color: #141414;
+  color: #F5F5F5;
+  height: 70px;
+  text-align: center;
+
+  }
+footer p{
+    background-color: #141414;
+    color: #F5F5F5;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 2rem;
+    padding: 23px 0;
+    text-transform: capitalize;
+
+}
+
+@media screen and (max-width: 1200px) {
+  .title {
+    font-size: 7rem;
+    border: solid 1rem #F5F5F5;
+  }
+  .slogan {
+    font-size: 1.5rem;
+  }
+  .learnMore {
+    font-size: 1.5rem;
+    padding: .3rem 3rem;
+    margin-left: -70px;
+  }
+  .about-content p {
+    font-size: 3rem;
+  }
+  .work-content p {
+    font-size: 3rem;
+  }
+  .icons {
+    padding: 5% 20%;
+  }
+  [data-name="svg"] {
+    width: 100px;
+  }
+}
+@media screen and (max-width: 800px) {
+
+  /*header {
+    height: 30px;
+  }*/
+  /*.logo {
+    font-size: 15px;
+    margin: 6px 0 6px 20px;
+  }*/
+  nav {
+      display: none;
+  }
+  .logo {
+      margin-left: 20px;
+  }
+  .menu-svg {
+    display: block;
+    margin-right: 20px;
+  }
+  .home-content {
+    background-image:url(../img/home-benirestoration3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:  cover;
+    text-align: center;
+    min-height: 100vh;
+    position: relative;
+  }
+  .title {
+    font-size: 3rem;
+    border: solid .5rem #F5F5F5;
+  }
+  .slogan {
+    font-size: 1.3rem;
+  }
+  .learnMore {
+    display: none;
+  }
+  .about-content p {
+    font-size: 2rem;
+  }
+  .work-content p {
+    font-size: 2rem;
+  }
+  .contact-content h4 {
+    font-size: 1.5rem;
+    padding-top: 30px;
+  }
+  .icons {
+    padding: 0 10%;
+  }
+  [data-name="svg"] {
+    width: 70px;
+  }
+  footer {
+    height: 30px;
+    }
+  footer p{
+      font-size: 1rem;
+      padding: 13px 0;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .home-content {
+    min-height: calc(100vh - 30px);
+  }
+  .title{
+    font-size: 2.5rem;
+    border: solid .6rem #F5F5F5;
+  }
+  .slogan {
+    font-size: 1rem;
+  }
+  .about-content p {
+    font-size: 1.5rem;
+  }
+  .work-content p {
+    font-size: 1.5rem;
+  }
+  .contact-content h4 {
+    font-size: 1rem;
+    padding-top: 30px;
+  }
+  .icons {
+    margin: 0;
+    padding: 0 5%;
+  }
+  [data-name="svg"] {
+    height: 100px;
+    width: 50px;
+  }
+  footer {
+    height: 20px;
+  }
+  footer p{
+    font-size: .5rem;
+    padding: 5px 0;
+  }
+
+}
