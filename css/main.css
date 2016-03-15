@@ -1,205 +1,451 @@
 html {
-  font-size: 62.5%;
+    font-size: 10px;
 }
+
 body {
-  font-family: "Raleway", Helvetica, sans-serif;
-  /*min-width: 100vh;*/
+    font-family: "Raleway", Helvetica, sans-serif;
+    background-color: #141414;
+    min-width: 320px;
 }
+
 header {
-  height: 60px;
-  background-color: #141414;
-  color: #F5F5F5;
-  /*display: flex;
-  flex-direction: row;
-  justify-content: space-between;*/
+    height: 60px;
+    background-color: #141414;
+    color: #F5F5F5;
+    position: fixed;
+    width: 100vw;
+    min-width: 320px;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
 .logo {
-  float:left;
-  font-weight: 400;
-  font-size: 40px;
-  margin: 6.5px 0 6.5px 40px;
+    font-weight: 400;
+    font-size: 4rem;
+    margin: 0;
+    padding-left: 2rem;
 }
-nav {
-  float: right;
-  margin: 19.5px 40px 19.5px 0;
+
+.nav {
+    position: fixed;
+    background: #141414;
+    text-align: center;
+    top: 60px;
+    right: 0;
+    z-index: 1;
+    width: 0px;
+    height: 100%;
+    transition: width .5s ease-in-out;
+    box-shadow: -6px 0 8px rgba(0, 0, 0, .5);
 }
-nav a {
-  color: #F5F5F5;
-  font-size: 18px;
-  font-weight: 200;
-  text-decoration: none;
-  margin: 0 20px;
+
+.nav nav li {
+    list-style-type: none;
+    margin: 20px;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #F5F5F5;
+    color: #F5F5F5;
+    font-size: 1.8rem;
+    font-weight: 200;
+    text-decoration: none;
+    cursor: pointer;
 }
-.menu-svg {
-  float: right;
-  margin-top: 5.5px;
-  margin-right: 50px;
-  display: none;
+
+.nav nav li:hover {
+    color: #BDC3C7;
+    border-bottom: 1px solid #BDC3C7;
+    font-size: 2rem;
+    transition: font .2s ease-in-out;
 }
+
+#menu-svg {
+    cursor: pointer;
+    padding-right: 2rem;
+}
+
+#menu-svg p {
+    float: left;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin: 5px 10px 0 0;
+}
+
+#close-svg {
+    display: none;
+    cursor: pointer;
+    padding: 2rem;
+}
+
+#menu {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+#menu .cls-1 {
+    fill: none;
+    stroke: #F5F5F5;
+    stroke-miterlimit: 10;
+    stroke-width: 10px;
+}
+
+#close {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+#close .cls-1 {
+    fill: none;
+    stroke: #F5F5F5;
+    stroke-miterlimit: 10;
+    stroke-width: 10px;
+}
+
 .home-content {
-  background-image:url(../img/home-benirestoration3.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  text-align: center;
-  min-height: calc(100vh - 60px);
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
-
+    background-image: url(../img/home-benirestoration3.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
 }
-.wrapper-hs {
-  margin-bottom: 15%;
-  /*position: flex;*/
 
-  /*margin: 30% auto;*/
+.banner-wrap {
+    margin: 0 auto;
+    position: relative;
+    top: 35%;
+    text-align: center;
 }
+
 .title {
-  color: #F5F5F5;
-  font-weight: 500;
-  font-size: 9rem;
-  margin: 0 auto;
-  border: solid 1.3rem #F5F5F5;
-  text-shadow:  6px 6px 8px rgba(0, 0, 0, .8);
-  box-shadow: 6px 6px 8px rgba(0, 0, 0, .8);
-  padding: 5px 30px;
-  position: relative;
-  display: inline-block;
-  text-transform: uppercase;
+    color: #F5F5F5;
+    font-weight: 500;
+    font-size: 9rem;
+    margin: 0 auto;
+    border: solid 1.3rem #F5F5F5;
+    text-shadow: 6px 6px 8px rgba(0, 0, 0, .8);
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, .8);
+    padding: 5px 30px;
+    display: inline-block;
+    text-transform: uppercase;
 }
+
 .slogan {
-  color: #F5F5F5;
-  font-weight: 200;
-  font-size: 2rem;
-  margin: 10px 0 auto;
+    text-align: center;
+    color: #F5F5F5;
+    font-weight: 200;
+    font-size: 2rem;
 }
+
 .learnMore {
-  font-size: 2rem;
-  font-weight: 200;
-  color: #141414;
-  border: none;
-  outline: none;
-  border-radius: 1rem;
-  padding: .5rem 5rem;
-  background: rgba(250, 250, 250, .28);
-  text-decoration: none;
-  position: absolute;
-  text-align: center;
-  left: 50%;
-  margin-left: -100px;
-  bottom: 20px;
+    display: block;
+    margin: 15px auto;
+    font-size: 2rem;
+    font-weight: 200;
+    color: #141414;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+    padding: .5rem 5rem;
+    background: rgba(250, 250, 250, .28);
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    width: 110px;
 }
 
 .about-content {
-  background-image:url(../img/about-benirestoration.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center ;
-  /*padding: 15rem 0 15rem 85rem;*/
-  /*max-height: 100vh;*/
-  position: relative;
-  max-height: 100%;
-
+    background: #ECECEC;
+    display: flex;
+    flex-direction: column;
+    padding: 5% 0 0 0;
+    justify-content: center;
+    border-bottom: solid 3px #fcfcfc;
 }
-.about-content p {
-  font-size: 5rem;
-  font-weight: 200;
-  color: #F5F5F5;
-  margin: 10% 0 10% 60%;
-  display: inline-block;
 
-
+.about-content-wrap1 {
+    background: #ECECEC;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
 }
+
+.about-content-wrap1 div {
+    flex: auto;
+    width: 100%;
+    padding: 0 5% 5% 5%;
+}
+
+.about-content-wrap1 div:nth-child(1) {
+    border-right: solid 3px #fcfcfc;
+}
+
+.about-content-wrap1 div img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    opacity: .8;
+    border-radius: 30px;
+    transition: all .5s ease-in-out;
+}
+
+.about-content-wrap1 img:hover {
+    opacity: 1;
+}
+
+.about-content-wrap2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-content-wrap2 p {
+    margin: 0;
+    font-size: 4rem;
+    font-weight: 200;
+    color: #4A4E4D;
+    display: block;
+    padding: 0 30% 5% 30%;
+    text-align: center;
+}
+
 .work-content {
-  background-image:url(../img/work-benirestoration.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  /*padding: 15rem 0 15rem 85rem;*/
-  /*max-height: 100vh;*/
-  position: relative;
-  max-height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: solid 3px #fcfcfc;
+}
 
-  /*display: flex;*/
+.work-content-wrap1 {
+    background: #f3f3f3;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
-.work-content p {
-  font-size: 5rem;
-  font-weight: 200;
-  color: #F5F5F5;
-  margin: 40% 0 2% 2%;
-  display: inline-block;
+
+.work-content-wrap1 p {
+    font-size: 4rem;
+    font-weight: 200;
+    color: #4A4E4D;
+    display: block;
+    padding-bottom: 10px;
 }
-/*.work-content p {
-  font-size: 6rem;
-  font-weight: 200;
-  color: #F5F5F5;
-  margin: 0;
-}*/
-.contact-content{
-  background-image:url(../img/contact-benirestoration.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  max-height: 100%;
-  text-align: center;
+
+.to-studio-1 {
+    padding: 2rem 4rem;
+    font-size: 2rem;
+    border-radius: 1.5rem;
+    color: #7f8c8d;
+    background: #ffffff;
+    text-decoration: none;
 }
+
+.to-studio-2 {
+    color: #7f8c8d;
+    background: #E7E7E7;
+    text-decoration: none;
+    display: none;
+    font-size: 1.2rem;
+    padding: 1rem 4rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.work-content-wrap2 {
+    width: 40%;
+    margin: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    background: #f3f3f3;
+    border-right: solid 1px #fcfcfc;
+    border-left: solid 3px #fcfcfc;
+}
+
+.work-content-wrap2 div {
+    padding: 10% 1rem;
+    flex: auto;
+    width: 100%;
+}
+
+.work-content-wrap2 div img {
+    position: relative;
+    right: 20%;
+    border-radius: 30px;
+    height: auto;
+    width: 100%;
+}
+
+.work-content-1 {
+    background: #f7f7f7;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.work-content-wrap3 {
+    width: 50%;
+    margin: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    border-right: solid 3px #fcfcfc;
+    border-left: solid 1px #fcfcfc;
+}
+
+.work-content-wrap3 div {
+    align-self: center;
+    padding: 10% 1rem;
+    flex: auto;
+    width: 100%;
+}
+
+.frame {
+    position: relative;
+    left: 20%;
+    border-radius: 30px;
+    height: auto;
+    width: 120%;
+}
+
+.gong {
+    position: relative;
+    left: 40%;
+    border-radius: 30px;
+    height: auto;
+    width: 80%;
+}
+
+.work-content-wrap4 {
+    background: #f7f7f7;
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work-content-wrap4 p {
+    margin: 0;
+    font-size: 4rem;
+    font-weight: 200;
+    ccolor: #4A4E4D;
+    display: block;
+    text-align: center;
+    padding: 0 10%;
+}
+
+.contact-content {
+    background: #417D80;
+    max-height: 100%;
+    text-align: center;
+}
+
 .contact-content h4 {
-  font-size: 2.5rem;
-  font-weight: 400;
-  color: #F5F5F5;
-  margin: 0 auto;
-  /*display: inline-block;*/
-  padding-top: 50px;
-  text-transform: capitalize;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #F5F5F5;
+    margin: 0 auto;
+    padding-top: 50px;
+    text-transform: capitalize;
+    display: none;
 }
+
 .icons {
- display: flex;
- justify-content: space-between;
- /*margin: 0 10%;*/
- padding: 10%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-direction: row;
+    align-items: center;
+    height: 30rem;
 }
+
+.icon {
+    height: 100%;
+    width: 33.3%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
 [data-name="svg"] {
-  /*margin: 5%;*/
-  width: 200px;
-  fill: #F5F5F5;
+    height: 100px;
+    width: 100px;
+    fill: #F5F5F5;
+    cursor: pointer;
+    transition: height .5s ease-in-out;
 }
-#message .cls-1, #locate .cls-1 {
-  fill: none;
-  stroke: #F5F5F5;
-  stroke-miterlimit: 10;
-  stroke-width: 10px;
+
+#locate .cls-1 {
+    fill: #F5F5F5;
+    stroke: #F5F5F5;
+    stroke-miterlimit: 10;
+    stroke-width: 3px;
 }
-#call .cls-1, #call .cls-2 {
-  fill: none;
-  stroke: #F5F5F5;
-  stroke-miterlimit: 10px;
+
+#message .cls-1 {
+    fill: none;
+    stroke: #F5F5F5;
+    stroke-miterlimit: 10;
+    stroke-width: 3px;
 }
-#call .cls-1 {
-  stroke-width: 10px;
+
+#call {
+    fill: #F5F5F5;
 }
-#menu .cls-1 {
-  fill: none;
-  stroke: #FFF;
-  stroke-miterlimit: 10;
-  stroke-width: 15px;
+
+#email {
+    font-weight: 200;
+    font-size: 3rem;
+    color: #F5F5F5;
+    cursor: pointer;
+    margin: 0;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    top: -5%;
 }
-#menu {
-  height: 45px;
-  width: 50px;
-  padding:1px;
+
+#cell {
+    font-weight: 200;
+    font-size: 3rem;
+    color: #F5F5F5;
+    cursor: pointer;
+    margin: 0;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    top: -5%;
+}
+
+#address {
+    font-weight: 200;
+    font-size: 3rem;
+    color: #F5F5F5;
+    cursor: pointer;
+    margin: 0;
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    top: -16%;
 }
 
 footer {
-  background-color: #141414;
-  color: #F5F5F5;
-  height: 70px;
-  text-align: center;
+    background-color: #141414;
+    color: #F5F5F5;
+    height: 70px;
+    text-align: center;
+}
 
-  }
-footer p{
+footer p {
     background-color: #141414;
     color: #F5F5F5;
     margin: 0 auto;
@@ -207,133 +453,277 @@ footer p{
     font-size: 2rem;
     padding: 23px 0;
     text-transform: capitalize;
+}
 
+@media screen and (max-width: 1500px) {
+    .about-content-wrap2 p {
+        font-size: 3rem;
+    }
+    .about-content-wrap1 div img {
+        border-radius: 10px;
+    }
+    .work-content-wrap1 p {
+        font-size: 3rem;
+    }
+    .work-content-wrap2 div img {
+        border-radius: 10px;
+    }
+    .to-studio-1 {
+        padding: 1.5rem 5rem;
+        font-size: 2rem;
+    }
+    .work-content-wrap4 p {
+        font-size: 3rem;
+    }
+    .frame {
+        border-radius: 10px;
+    }
+    .gong {
+        border-radius: 10px;
+    }
+    #email {
+        font-size: 2em;
+    }
+    #cell {
+        font-size: 2rem;
+    }
+    #address {
+        font-size: 2rem;
+        top: -12%;
+    }
 }
 
 @media screen and (max-width: 1200px) {
+    .about-content-wrap2 p {
+        font-size: 2rem;
+    }
+    .work-content-wrap1 p {
+        font-size: 2rem;
+    }
+    .to-studio-1 {
+        padding: 1rem 4rem;
+        font-size: 1rem;
+    }
+    .work-content-wrap4 p {
+        font-size: 2rem;
+    }
+    .icons {
+        height: 20rem;
+    }
+    [data-name="svg"] {
+        height: 60px;
+        width: 60px;
+    }
+    #email {
+        font-size: 1.5em;
+    }
+    #cell {
+        font-size: 1.5rem;
+    }
+    #address {
+        font-size: 1.5rem;
+        top: -10%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .title {
+        font-size: 6rem;
+    }
+    .slogan {
+        font-size: 2rem;
+    }
+    .learnMore {
+      display: none;
+    }
+}
+
+@media screen and (max-width: 760px) {
+  header {
+    height: 40px;
+  }
+  .logo {
+    font-size: 2.7rem;
+  }
+  #menu {
+    height: 2rem;
+    width: 2rem;
+  }
+  #menu-svg p {
+    display: none;
+  }
+  #close {
+    height: 2rem;
+    width: 2rem;
+  }
+  .nav {
+    top: 40px;
+  }
   .title {
-    font-size: 7rem;
+    font-size: 5rem;
     border: solid 1rem #F5F5F5;
   }
   .slogan {
     font-size: 1.5rem;
   }
-  .learnMore {
+  .about-content-wrap2 p {
     font-size: 1.5rem;
-    padding: .3rem 3rem;
-    margin-left: -70px;
   }
-  .about-content p {
-    font-size: 3rem;
+  .work-content-wrap1 p {
+    font-size: 1.5rem;
   }
-  .work-content p {
-    font-size: 3rem;
-  }
-  .icons {
-    padding: 5% 20%;
-  }
-  [data-name="svg"] {
-    width: 100px;
+  .work-content-wrap4 p {
+    font-size: 1.5rem;
   }
 }
-@media screen and (max-width: 800px) {
 
-  /*header {
-    height: 30px;
-  }*/
-  /*.logo {
-    font-size: 15px;
-    margin: 6px 0 6px 20px;
-  }*/
-  nav {
-      display: none;
-  }
-  .logo {
-      margin-left: 20px;
-  }
-  .menu-svg {
-    display: block;
-    margin-right: 20px;
-  }
-  .home-content {
-    background-image:url(../img/home-benirestoration3.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:  cover;
-    text-align: center;
-    min-height: 100vh;
-    position: relative;
-  }
-  .title {
-    font-size: 3rem;
-    border: solid .5rem #F5F5F5;
-  }
-  .slogan {
-    font-size: 1.3rem;
-  }
-  .learnMore {
-    display: none;
-  }
-  .about-content p {
-    font-size: 2rem;
-  }
-  .work-content p {
-    font-size: 2rem;
-  }
-  .contact-content h4 {
-    font-size: 1.5rem;
-    padding-top: 30px;
-  }
-  .icons {
-    padding: 0 10%;
-  }
-  [data-name="svg"] {
-    width: 70px;
-  }
-  footer {
-    height: 30px;
+@media screen and (max-width: 600px) {
+    header {
+        position: static;
     }
-  footer p{
-      font-size: 1rem;
-      padding: 13px 0;
-  }
-}
+    header {
+        height: 40px;
+    }
+    .logo {
+        font-size: 2.7rem;
+    }
+    #menu {
+        height: 2rem;
+        width: 2rem;
+    }
+    #menu-svg p {
+        display: none;
+    }
+    #close {
+        height: 2rem;
+        width: 2rem;
+    }
+    .nav {
+        top: 40px;
+    }
+    .home-content {
+        height: calc(100vh - 40px);
+    }
+    .title {
+        font-size: 2.5rem;
+        border: solid .6rem #F5F5F5;
+    }
+    .slogan {
+        font-size: 1rem;
+    }
+    .about-content-wrap2 p {
+        font-size: 1.2rem;
+        padding: 0 5% 5% 5%;
+    }
+    .about-content-wrap1 {
+        flex-flow: column nowrap;
+        padding: 0;
+    }
+    .about-content-wrap1 div {
+        padding: 0 0 1rem 0;
+        text-align: center;
+    }
+    .about-content-wrap1 div:nth-child(1) {
+        border-right: none;
+    }
+    .about-content-wrap1 div img {
+        width: 90%;
+        opacity: 1;
+        border-radius: 10px;
+    }
+    .work-content {
+        flex-direction: column;
+    }
+    .work-content-wrap1 {
+        width: 100%;
+    }
+    .work-content-wrap1 p {
+        font-size: 1.2rem;
+        padding: 1rem 0;
+    }
+    .to-studio-1 {
+        display: none;
+    }
+    .work-content-wrap2 {
+        background: #f3f3f3;
+        width: 100%;
+        flex-flow: column nowrap;
+        align-items: center;
+        border: 0;
+    }
+    .work-content-wrap2 div {
+        padding: 0;
+        width: 90%;
+        padding-bottom: 1rem;
+    }
+    .work-content-wrap2 div img {
 
-@media screen and (max-width:500px) {
-  .home-content {
-    min-height: calc(100vh - 30px);
-  }
-  .title{
-    font-size: 2.5rem;
-    border: solid .6rem #F5F5F5;
-  }
-  .slogan {
-    font-size: 1rem;
-  }
-  .about-content p {
-    font-size: 1.5rem;
-  }
-  .work-content p {
-    font-size: 1.5rem;
-  }
-  .contact-content h4 {
-    font-size: 1rem;
-    padding-top: 30px;
-  }
-  .icons {
-    margin: 0;
-    padding: 0 5%;
-  }
-  [data-name="svg"] {
-    height: 100px;
-    width: 50px;
-  }
-  footer {
-    height: 20px;
-  }
-  footer p{
-    font-size: .5rem;
-    padding: 5px 0;
-  }
-
+        position: static;
+        border-radius: 5px;
+        border-radius: 10px;
+    }
+    .to-studio-2 {
+        display: block;
+    }
+    .work-content-1 {
+        padding: 1rem 0 3rem 0;
+        flex-direction: column;
+    }
+    .work-content-wrap3 {
+        width: 100%;
+        flex-flow: column nowrap;
+        align-items: center;
+        border: none;
+    }
+    .work-content-wrap3 div {
+        padding: 0 0 1rem 0;
+        text-align: center;
+        width: 100%;
+    }
+    .work-content-wrap3 div img {
+      border-radius: 10px;
+    }
+    .frame {
+        position: static;
+        border-radius: 5px;
+        width: 90%;
+    }
+    .gong {
+        position: static;
+        border-radius: 5px;
+        width: 90%;
+    }
+    .work-content-wrap4 {
+        width: 100%;
+    }
+    .work-content-wrap4 p {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    .contact-content h4 {
+        display: none;
+    }
+    [data-name="svg"] {
+        height: 50px;
+        width: 50px;
+        fill: #F5F5F5;
+        cursor: pointer;
+        transition: height .5s ease-in-out;
+    }
+    #email {
+        font-size: 1em;
+    }
+    #cell {
+        font-size: 1rem;
+    }
+    #address {
+        font-size: 1rem;
+    }
+    footer {
+        height: 30px;
+    }
+    footer p {
+        font-size: 1rem;
+        padding: 13px 0;
+    }
 }
