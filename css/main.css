@@ -36,7 +36,7 @@ header {
     top: 60px;
     right: 0;
     z-index: 1;
-    width: 0px;
+    width: 0;
     height: 100%;
     transition: width .5s ease-in-out;
     box-shadow: -6px 0 8px rgba(0, 0, 0, .5);
@@ -241,26 +241,6 @@ header {
     padding-bottom: 10px;
 }
 
-.to-studio-1 {
-    padding: 2rem 4rem;
-    font-size: 2rem;
-    border-radius: 1.5rem;
-    color: #7f8c8d;
-    background: #ffffff;
-    text-decoration: none;
-}
-
-.to-studio-2 {
-    color: #7f8c8d;
-    background: #E7E7E7;
-    text-decoration: none;
-    display: none;
-    font-size: 1.2rem;
-    padding: 1rem 4rem;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-}
-
 .work-content-wrap2 {
     width: 40%;
     margin: 0;
@@ -275,6 +255,7 @@ header {
     padding: 10% 1rem;
     flex: auto;
     width: 100%;
+    align-self: center;
 }
 
 .work-content-wrap2 div img {
@@ -308,17 +289,17 @@ header {
     width: 100%;
 }
 
-.frame {
+.chairs {
     position: relative;
-    left: 20%;
+    left: 0%;
     border-radius: 30px;
     height: auto;
     width: 120%;
 }
 
-.gong {
+.chair {
     position: relative;
-    left: 40%;
+    left: 20%;
     border-radius: 30px;
     height: auto;
     width: 80%;
@@ -468,17 +449,13 @@ footer p {
     .work-content-wrap2 div img {
         border-radius: 10px;
     }
-    .to-studio-1 {
-        padding: 1.5rem 5rem;
-        font-size: 2rem;
-    }
     .work-content-wrap4 p {
         font-size: 3rem;
     }
-    .frame {
+    .chairs {
         border-radius: 10px;
     }
-    .gong {
+    .chair {
         border-radius: 10px;
     }
     #email {
@@ -499,10 +476,6 @@ footer p {
     }
     .work-content-wrap1 p {
         font-size: 2rem;
-    }
-    .to-studio-1 {
-        padding: 1rem 4rem;
-        font-size: 1rem;
     }
     .work-content-wrap4 p {
         font-size: 2rem;
@@ -534,47 +507,47 @@ footer p {
         font-size: 2rem;
     }
     .learnMore {
-      display: none;
+        display: none;
     }
 }
 
 @media screen and (max-width: 760px) {
-  header {
-    height: 40px;
-  }
-  .logo {
-    font-size: 2.7rem;
-  }
-  #menu {
-    height: 2rem;
-    width: 2rem;
-  }
-  #menu-svg p {
-    display: none;
-  }
-  #close {
-    height: 2rem;
-    width: 2rem;
-  }
-  .nav {
-    top: 40px;
-  }
-  .title {
-    font-size: 5rem;
-    border: solid 1rem #F5F5F5;
-  }
-  .slogan {
-    font-size: 1.5rem;
-  }
-  .about-content-wrap2 p {
-    font-size: 1.5rem;
-  }
-  .work-content-wrap1 p {
-    font-size: 1.5rem;
-  }
-  .work-content-wrap4 p {
-    font-size: 1.5rem;
-  }
+    header {
+        height: 40px;
+    }
+    .logo {
+        font-size: 2.7rem;
+    }
+    #menu {
+        height: 2rem;
+        width: 2rem;
+    }
+    #menu-svg p {
+        display: none;
+    }
+    #close {
+        height: 2rem;
+        width: 2rem;
+    }
+    .nav {
+        top: 40px;
+    }
+    .title {
+        font-size: 5rem;
+        border: solid 1rem #F5F5F5;
+    }
+    .slogan {
+        font-size: 1.5rem;
+    }
+    .about-content-wrap2 p {
+        font-size: 1.5rem;
+    }
+    .work-content-wrap1 p {
+        font-size: 1.5rem;
+    }
+    .work-content-wrap4 p {
+        font-size: 1.5rem;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -641,9 +614,6 @@ footer p {
         font-size: 1.2rem;
         padding: 1rem 0;
     }
-    .to-studio-1 {
-        display: none;
-    }
     .work-content-wrap2 {
         background: #f3f3f3;
         width: 100%;
@@ -657,13 +627,9 @@ footer p {
         padding-bottom: 1rem;
     }
     .work-content-wrap2 div img {
-
         position: static;
         border-radius: 5px;
         border-radius: 10px;
-    }
-    .to-studio-2 {
-        display: block;
     }
     .work-content-1 {
         padding: 1rem 0 3rem 0;
@@ -681,14 +647,14 @@ footer p {
         width: 100%;
     }
     .work-content-wrap3 div img {
-      border-radius: 10px;
+        border-radius: 10px;
     }
-    .frame {
+    .chairs {
         position: static;
         border-radius: 5px;
         width: 90%;
     }
-    .gong {
+    .chair {
         position: static;
         border-radius: 5px;
         width: 90%;

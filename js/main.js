@@ -1,6 +1,6 @@
-(function () {
-    var contact = document.querySelectorAll('.icon')
-        , menu = document.querySelectorAll('.menu');
+(function() {
+    var contact = document.querySelectorAll('.icon'),
+        menu = document.querySelectorAll('.menu');
     // loop to get the .icon containers parent of
     //the svg wrapped in an anchor and the p children.
     for (var i = 0; i < contact.length; i++) {
@@ -32,18 +32,18 @@
     //function add toggle feature to the svg icons
     //as well as to the info.
     function toggleContact() {
-        var el = this.nextElementSibling
-            , ella = this.previousElementSibling;
+        var el = this.nextElementSibling,
+            ella = this.previousElementSibling;
 
         if (this.tagName === 'A') {
-            var x = this.firstElementChild
-                , height = x.scrollHeight;
+            var x = this.firstElementChild,
+                height = x.scrollHeight;
             x.style.height = '0';
             el.style.height = height;
             el.style.overflow = 'visible';
         } else if (this.tagName === 'P') {
-            var x = this.previousElementSibling.firstElementChild
-                , height = x.scrollWidth;
+            var x = this.previousElementSibling.firstElementChild,
+                height = x.scrollWidth;
             this.style.height = '0';
             this.style.overflow = 'hidden';
             x.style.height = height;
@@ -52,11 +52,11 @@
     //function adds capability for the mune to toggle on an offsetWidth
     //when interacting with the menu and x link.
     function toggleMenu() {
-        var x = document.querySelector('.nav')
-            , y = document.querySelector('.content')
-            , z = document.querySelector('html')
-            , el = this.nextElementSibling
-            , ella = this.previousElementSibling;
+        var x = document.querySelector('.nav'),
+            y = document.querySelector('.content'),
+            z = document.querySelector('html'),
+            el = this.nextElementSibling,
+            ella = this.previousElementSibling;
 
         if (this.id === 'menu-svg') {
             this.style.display = 'none';
@@ -73,8 +73,8 @@
             y.style.opacity = '';
             ella.style.display = 'inline-block';
         } else if (this.className === 'content') {
-            var c = document.getElementById('close-svg')
-                , ella = c.previousElementSibling;
+            var c = document.getElementById('close-svg'),
+                ella = c.previousElementSibling;
             c.style.display = 'none';
             x.style.width = '';
             y.style.opacity = '';
@@ -83,16 +83,16 @@
     }
 })(); //self executing function
 
-$(document).ready(function () {
+$(document).ready(function() {
 
-    $(document).scroll(function () {
+    $(document).scroll(function() {
         $('.nav').css('width', '');
         $('.nav').css('width', '');
         $('#close-svg').css('display', 'none');
         $('.content').css('opacity', '');
         $('#menu-svg').css('display', 'inline-block');
     })
-    $('li').click(function () {
+    $('li').click(function() {
         if ($(window).width() < 700) {
             $('.nav').css('width', '');
             $('#close-svg').css('display', 'none');
@@ -114,7 +114,7 @@ $(document).ready(function () {
         }
     });
 
-    $('.learnMore').click(function () {
+    $('.learnMore').click(function() {
         $('html, body').animate({
             scrollTop: $($(this).attr('href')).offset().top - 60
         }, 500);
